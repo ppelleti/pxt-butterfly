@@ -1,7 +1,7 @@
 /**
  * NeoPixel Butterfly.
  */
-//% color="#a000c0" weight=50 icon="\uf1d1" block="Butterfly"
+//% color="#9000d0" weight=50 icon="\uf1d1" block="Butterfly"
 namespace butterfly {
     /**
      * Create a NeoPixel strip for `butterflies` butterflies.
@@ -10,8 +10,7 @@ namespace butterfly {
      */
     //% block="NeoPixel butterflies at pin %pin|with %butterflies|butterflies"
     //% blockSetVariable=strip
-    export function create(pin: DigitalPin,
-        butterflies: number): neopixel.Strip {
+    export function create(pin: DigitalPin, butterflies: number): neopixel.Strip {
         return neopixel.create(pin, butterflies * 18, NeoPixelMode.RGB_RGB)
     }
 
@@ -22,9 +21,7 @@ namespace butterfly {
      * @param rgb RGB color to set
      */
     //% block="on %neo| set inner pixels of butterfly %butterfly| to %rgb=neopixel_colors"
-    export function setInner(neo: neopixel.Strip,
-        butterfly: number,
-        rgb: number) {
+    export function setInner(neo: neopixel.Strip, butterfly: number, rgb: number) {
         let offset: number = butterfly * 18
         for (let idx of innerPixels()) {
             neo.setPixelColor(idx + offset, rgb)
