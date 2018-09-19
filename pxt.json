@@ -4,7 +4,7 @@
     "description": "NeoPixel butterflies",
     "dependencies": {
         "core": "*",
-        "neopixel": "github:Microsoft/pxt-neopixel#0.6.9"
+        "neopixel": "github:Microsoft/pxt-neopixel#v0.6.9"
     },
     "files": [
         "README.md",
