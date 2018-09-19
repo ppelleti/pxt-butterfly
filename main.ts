@@ -11,8 +11,8 @@ namespace butterfly {
     //% block="NeoPixel butterflies at pin %pin|with %butterflies|butterflies"
     //% blockSetVariable=strip
     export function create(pin: DigitalPin,
-                           butterflies: number) : neopixel.Strip {
-        return neopixel.create(pin, butterflies * 18, RGB_RGB)
+        butterflies: number): neopixel.Strip {
+        return neopixel.create(pin, butterflies * 18, NeoPixelMode.RGB_RGB)
     }
 
     /**
@@ -23,8 +23,8 @@ namespace butterfly {
      */
     //% block="on %neo| set inner pixels of butterfly %butterfly| to %rgb=neopixel_colors"
     export function setInner(neo: neopixel.Strip,
-                             butterfly: number,
-                             rgb: number) {
+        butterfly: number,
+        rgb: number) {
         let offset: number = butterfly * 18
         for (let idx of innerPixels()) {
             neo.setPixelColor(idx + offset, rgb)
@@ -35,7 +35,7 @@ namespace butterfly {
      * Return the indices of the inner pixels on the butterfly.
      */
     //% block="inner pixels"
-    export function innerPixels() : number[] {
+    export function innerPixels(): number[] {
         return [0, 3, 9, 12]
     }
 }
