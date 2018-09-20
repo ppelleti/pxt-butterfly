@@ -62,6 +62,7 @@ namespace butterfly {
      * Return the indices of the inner pixels on the butterfly.
      */
     //% block="inner pixels"
+    //% advanced
     export function innerPixels(): number[] {
         return [0, 3, 9, 12]
     }
@@ -70,6 +71,7 @@ namespace butterfly {
      * Return the indices of the middle pixels on the butterfly.
      */
     //% block="middle pixels"
+    //% advanced
     export function middlePixels(): number[] {
         return [1, 4, 6, 8, 10, 13, 15, 17]
     }
@@ -78,6 +80,7 @@ namespace butterfly {
      * Return the indices of the outer pixels on the butterfly.
      */
     //% block="outer pixels"
+    //% advanced
     export function outerPixels(): number[] {
         return [2, 5, 7, 11, 14, 16]
     }
