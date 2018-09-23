@@ -22,7 +22,7 @@ namespace butterfly {
      * @param butterfly the number of the butterfly (0-based)
      * @param rgb RGB color to set
      */
-    //% block="on %neo| set inner pixels of butterfly %butterfly| to %rgb=neopixel_colors"
+    //% block="on %neo=variables_get(strip)| set inner pixels of butterfly %butterfly| to %rgb=neopixel_colors"
     export function setInner(neo: neopixel.Strip, butterfly: number, rgb: number) {
         let offset: number = butterfly * NPIX
         for (let idx of innerPixels()) {
@@ -36,7 +36,7 @@ namespace butterfly {
      * @param butterfly the number of the butterfly (0-based)
      * @param rgb RGB color to set
      */
-    //% block="on %neo| set middle pixels of butterfly %butterfly| to %rgb=neopixel_colors"
+    //% block="on %neo=variables_get(strip)| set middle pixels of butterfly %butterfly| to %rgb=neopixel_colors"
     export function setMiddle(neo: neopixel.Strip, butterfly: number, rgb: number) {
         let offset: number = butterfly * NPIX
         for (let idx of middlePixels()) {
@@ -50,7 +50,7 @@ namespace butterfly {
      * @param butterfly the number of the butterfly (0-based)
      * @param rgb RGB color to set
      */
-    //% block="on %neo| set outer pixels of butterfly %butterfly| to %rgb=neopixel_colors"
+    //% block="on %neo=variables_get(strip)| set outer pixels of butterfly %butterfly| to %rgb=neopixel_colors"
     export function setOuter(neo: neopixel.Strip, butterfly: number, rgb: number) {
         let offset: number = butterfly * NPIX
         for (let idx of outerPixels()) {
