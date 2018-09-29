@@ -2,6 +2,7 @@
     "name": "butterfly",
     "version": "0.0.0",
     "description": "NeoPixel butterflies",
+    "license": "MIT",
     "dependencies": {
         "core": "*",
         "neopixel": "github:Microsoft/pxt-neopixel#v0.6.9"
@@ -13,6 +14,6 @@
     "testFiles": [
         "test.ts"
     ],
-    "public": false,
+    "public": true,
     "installedVersion": "workspace:90d3f263-9e4b-42d3-627a-1b8089719d8e"
 }
