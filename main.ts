@@ -10,6 +10,7 @@ namespace butterfly {
      * @param pin the pin where the butterflies are connected.
      * @param butterflies number of butterflies in the strip, eg: 5
      */
+    //% blockId="butterfly_create"
     //% block="NeoPixel butterflies at pin %pin|with %butterflies|butterflies"
     //% blockSetVariable=strip
     export function create(pin: DigitalPin, butterflies: number): neopixel.Strip {
@@ -22,6 +23,7 @@ namespace butterfly {
      * @param butterfly the number of the butterfly (0-based)
      * @param rgb RGB color to set
      */
+    //% blockId="butterfly_setInner"
     //% block="on %neo=variables_get(strip)| set inner pixels of butterfly %butterfly| to %rgb=neopixel_colors"
     export function setInner(neo: neopixel.Strip, butterfly: number, rgb: number) {
         let offset: number = butterfly * NPIX
@@ -36,6 +38,7 @@ namespace butterfly {
      * @param butterfly the number of the butterfly (0-based)
      * @param rgb RGB color to set
      */
+    //% blockId="butterfly_setMiddle"
     //% block="on %neo=variables_get(strip)| set middle pixels of butterfly %butterfly| to %rgb=neopixel_colors"
     export function setMiddle(neo: neopixel.Strip, butterfly: number, rgb: number) {
         let offset: number = butterfly * NPIX
@@ -50,6 +53,7 @@ namespace butterfly {
      * @param butterfly the number of the butterfly (0-based)
      * @param rgb RGB color to set
      */
+    //% blockId="butterfly_setOuter"
     //% block="on %neo=variables_get(strip)| set outer pixels of butterfly %butterfly| to %rgb=neopixel_colors"
     export function setOuter(neo: neopixel.Strip, butterfly: number, rgb: number) {
         let offset: number = butterfly * NPIX
@@ -61,6 +65,7 @@ namespace butterfly {
     /**
      * Return the indices of the inner pixels on the butterfly.
      */
+    //% blockId="butterfly_innerPixels"
     //% block="inner pixels"
     //% advanced
     export function innerPixels(): number[] {
@@ -70,6 +75,7 @@ namespace butterfly {
     /**
      * Return the indices of the middle pixels on the butterfly.
      */
+    //% blockId="butterfly_middlePixels"
     //% block="middle pixels"
     //% advanced
     export function middlePixels(): number[] {
@@ -79,6 +85,7 @@ namespace butterfly {
     /**
      * Return the indices of the outer pixels on the butterfly.
      */
+    //% blockId="butterfly_outerPixels"
     //% block="outer pixels"
     //% advanced
     export function outerPixels(): number[] {
